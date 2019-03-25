@@ -4,8 +4,8 @@
     "description": "A UI library is built for Facebook, using React.",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server --config webpack.config.dev.js",
-        "build": "webpack --config webpack.config.prod.js",
+        "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
+        "build": "webpack --config ./config/webpack.config.prod.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
