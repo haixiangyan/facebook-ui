@@ -133,3 +133,6 @@ $RECYCLE.BIN/
 
 # Jetbrains
 /.idea
+
+# Dist
+/dist
