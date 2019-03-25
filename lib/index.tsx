@@ -1,7 +1,6 @@
 import React from 'react'
+// @ts-ignore
 import ReactDOM from 'react-dom'
+import Button from './Button'
 
-console.log(React)
-console.log(ReactDOM)
-
-export default ReactDOM
+ReactDOM.render(<Button/>, document.body)
