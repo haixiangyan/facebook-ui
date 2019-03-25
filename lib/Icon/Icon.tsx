@@ -1,5 +1,5 @@
 import * as React from 'react'
-import '../../icons/icon_roundclose_fill.svg'
+import './icons/index'
 
 interface IconProps {
   name: string

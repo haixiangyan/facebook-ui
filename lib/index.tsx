@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom'
 import Icon from './Icon/Icon'
 
 ReactDOM.render(
-  <Icon name="roundclose_fill"/>,
+  <div>
+    <Icon name="trashcan"/>
+  </div>,
   document.getElementById('root')
 )
