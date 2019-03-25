@@ -2,7 +2,8 @@
     "name": "facebook-ui",
     "versin": "0.0.1",
     "description": "A UI library is built for Facebook, using React.",
-    "main": "index.js",
+    "main": "dist/lib/index.js",
+    "types": "dist/lib/index",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js",
         "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js",
