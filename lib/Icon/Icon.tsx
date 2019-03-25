@@ -1,4 +1,5 @@
 import * as React from 'react'
+import '../../icons/icon_roundclose_fill.svg'
 
 interface IconProps {
   name: string
@@ -6,7 +7,11 @@ interface IconProps {
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
-    <span>{props.name}</span>
+    <span>
+      <svg>
+        <use xlinkHref={`#icon_${props.name}`}/>
+      </svg>
+    </span>
   )
 }
 
