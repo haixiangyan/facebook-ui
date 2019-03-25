@@ -1,32 +1,36 @@
 {
-  "name": "facebook-ui",
-  "version": "1.0.0",
-  "description": "A UI library is built for Facebook, using React.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Haixiang6123/facebook-ui.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Haixiang6123/facebook-ui/issues"
-  },
-  "homepage": "https://github.com/Haixiang6123/facebook-ui#readme",
-  "devDependencies": {
-    "awesome-typescript-loader": "^5.2.1",
-    "html-webpack-plugin": "^3.2.0",
-    "tslint": "^5.14.0",
-    "tslint-react": "^3.6.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
-  },
-  "dependencies": {
-    "typescript": "^3.3.4000"
-  }
+    "name": "facebook-ui",
+    "versin": "1.0.0",
+    "description": "A UI library is built for Facebook, using React.",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Haixiang6123/facebook-ui.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Haixiang6123/facebook-ui/issues"
+    },
+    "homepage": "https://github.com/Haixiang6123/facebook-ui#readme",
+    "devDependencies": {
+        "awesome-typescript-loader": "^5.2.1",
+        "html-webpack-plugin": "^3.2.0",
+        "tslint": "^5.14.0",
+        "tslint-react": "^3.6.0",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.2.1"
+    },
+    "dependencies": {
+        "react": "^16.8.5",
+        "react-dom": "^16.8.5",
+        "typescript": "^3.3.4000"
+    }
 }
