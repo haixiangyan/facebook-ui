@@ -1,8 +1,8 @@
 import * as React from 'react'
-function Button() {
+function FbButton() {
   return (
     <div>Button</div>
   )
 }
 
-export default Button
+export default FbButton

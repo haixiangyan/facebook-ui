@@ -9,7 +9,7 @@ interface IconProps extends React.SVGAttributes<SVGElement> {
   spin?: boolean
 }
 
-const Icon: React.FunctionComponent<IconProps> =
+const FbIcon: React.FunctionComponent<IconProps> =
   ({className, name, solid, spin, ...restProps}) => {
     const link = `#icon_${name}` + (solid ? '_fill' : '')
     const classNames = classes('fb-icon', className, spin && 'fb-icon-spin')
@@ -20,4 +20,4 @@ const Icon: React.FunctionComponent<IconProps> =
     )
 }
 
-export default Icon
+export default FbIcon
