@@ -1,4 +1,4 @@
-export { default as Icon } from './Icon/FbIcon'
+export { default as FbIcon } from './Icon/FbIcon'
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
