@@ -1,5 +1,17 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .fb-icon {
   width: 1em;
   height: 1em;
   fill: #4267b2;
+  &.fb-icon-spin {
+    animation: spin .7s infinite linear;
+  }
 }

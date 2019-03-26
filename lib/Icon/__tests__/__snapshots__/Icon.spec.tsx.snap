@@ -5,7 +5,7 @@ exports[`Icon can render 1`] = `
   className="fb-icon"
 >
   <use
-    xlinkHref="#icon_video"
+    xlinkHref="#icon-icon_video"
   />
 </svg>
 `;

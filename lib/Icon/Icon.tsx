@@ -1,19 +1,20 @@
 import * as React from 'react'
 import classes from '../utils/classes'
-import './icons.js'
+import './icons/index'
 import './Icon.scss'
 
 interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string
   solid?: boolean
+  spin?: boolean
 }
 
 const Icon: React.FunctionComponent<IconProps> =
-  ({className, name, solid, ...restProps}) => {
+  ({className, name, solid, spin, ...restProps}) => {
     const link = `#icon-icon_${name}` + (solid ? '_fill' : '')
-    console.log(link)
+    const classNames = classes('fb-icon', className, spin && 'fb-icon-spin')
     return (
-      <svg className={classes('fb-icon', className)} {...restProps}>
+      <svg className={classNames} {...restProps}>
         <use xlinkHref={link}/>
       </svg>
     )

@@ -15,7 +15,7 @@ ReactDOM.render(
     <Icon className={'test-icon'} name="trashcan"/>
     <Icon style={{width: '2em', height: '2em'}} name="skin"/>
     <Icon name="sport" onMouseEnter={() => console.log(1)} onMouseDown={() => console.log(2)} onClick={fn}/>
-    <Icon name="shakehands" solid={true}/>
+    <Icon spin={true} name="shakehands" solid={true}/>
   </div>,
   document.getElementById('root')
 )

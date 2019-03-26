@@ -1,4 +1,4 @@
-function classes(...names: (string | undefined)[]) {
+function classes(...names: Array<string | undefined | false>) {
   return names.filter(Boolean).join(' ')
 }
 
