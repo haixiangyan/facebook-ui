@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="6" failures="0" time="2.961">
+  <testsuite name="Icon" errors="0" failures="0" skipped="0" timestamp="2019-03-26T05:24:18" time="2.296" tests="2">
+    <testcase classname="Icon can render" name="Icon can render" time="0.012">
+    </testcase>
+    <testcase classname="Icon can handle event" name="Icon can handle event" time="0.025">
+    </testcase>
+  </testsuite>
+  <testsuite name="classes function" errors="0" failures="0" skipped="0" timestamp="2019-03-26T05:24:20" time="0.119" tests="4">
+    <testcase classname="classes function accepts no parameter" name="classes function accepts no parameter" time="0.002">
+    </testcase>
+    <testcase classname="classes function can combine one class name" name="classes function can combine one class name" time="0">
+    </testcase>
+    <testcase classname="classes function can combine class names" name="classes function can combine class names" time="0">
+    </testcase>
+    <testcase classname="classes function can pass undefined" name="classes function can pass undefined" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
