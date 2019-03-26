@@ -1,8 +1,8 @@
-export { default as Icon } from './Icon/FbIcon'
+export { default as Icon } from './Icon/Icon'
 
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import FbIcon from './Icon/FbIcon'
+import Icon from './Icon/Icon'
 import './index.scss'
 
 const fn: React.MouseEventHandler = (e: React.MouseEvent) => {
@@ -12,10 +12,10 @@ const fn: React.MouseEventHandler = (e: React.MouseEvent) => {
 
 ReactDOM.render(
   <div>
-    <FbIcon className={'test-icon'} name="trashcan"/>
-    <FbIcon style={{width: '2em', height: '2em'}} name="skin"/>
-    <FbIcon name="sport" onMouseEnter={() => console.log(1)} onMouseDown={() => console.log(2)} onClick={fn}/>
-    <FbIcon spin={true} name="shakehands" solid={true}/>
+    <Icon className={'test-icon'} name="trashcan"/>
+    <Icon style={{width: '2em', height: '2em'}} name="skin"/>
+    <Icon name="sport" onMouseEnter={() => console.log(1)} onMouseDown={() => console.log(2)} onClick={fn}/>
+    <Icon spin={true} name="shakehands" solid={true}/>
   </div>,
   document.getElementById('root')
 )
