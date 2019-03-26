@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import FbIcon from '../lib/Icon/FbIcon'
+import { FbIcon } from '../lib/index'
 
 ReactDOM.render(
     <div>
