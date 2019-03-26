@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" time="2.49">
-  <testsuite name="Icon" errors="0" failures="0" skipped="0" timestamp="2019-03-26T07:44:34" time="1.434" tests="2">
-    <testcase classname="Icon can render" name="Icon can render" time="0.01">
+<testsuites name="jest tests" tests="8" failures="0" time="2.523">
+  <testsuite name="Icon" errors="0" failures="0" skipped="0" timestamp="2019-03-26T08:04:20" time="1.457" tests="4">
+    <testcase classname="Icon should render" name="Icon should render" time="0.01">
     </testcase>
-    <testcase classname="Icon can handle event" name="Icon can handle event" time="0.023">
+    <testcase classname="Icon should handle event" name="Icon should handle event" time="0.023">
+    </testcase>
+    <testcase classname="Icon should receive props solid" name="Icon should receive props solid" time="0.002">
+    </testcase>
+    <testcase classname="Icon should receive props spin" name="Icon should receive props spin" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="classes function" errors="0" failures="0" skipped="0" timestamp="2019-03-26T07:44:36" time="0.116" tests="4">
-    <testcase classname="classes function accepts no parameter" name="classes function accepts no parameter" time="0.002">
+  <testsuite name="classes function" errors="0" failures="0" skipped="0" timestamp="2019-03-26T08:04:21" time="0.116" tests="4">
+    <testcase classname="classes function accepts no parameter" name="classes function accepts no parameter" time="0.001">
     </testcase>
     <testcase classname="classes function can combine one class name" name="classes function can combine one class name" time="0">
     </testcase>
-    <testcase classname="classes function can combine class names" name="classes function can combine class names" time="0.002">
+    <testcase classname="classes function can combine class names" name="classes function can combine class names" time="0">
     </testcase>
     <testcase classname="classes function can pass undefined" name="classes function can pass undefined" time="0">
     </testcase>

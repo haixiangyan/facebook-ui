@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon can render 1`] = `
+exports[`Icon should render 1`] = `
 <svg
   className="fb-icon"
 >
   <use
-    xlinkHref="#icon-icon_video"
+    xlinkHref="#icon_video"
   />
 </svg>
 `;
