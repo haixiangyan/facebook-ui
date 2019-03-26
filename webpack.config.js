@@ -1,4 +1,6 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
@@ -20,6 +22,10 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: 'svg-sprite-loader'
+            },
+            {
+                test: /\.s([ac])ss$/,
+                use: ["style-loader", "css-loader", 'sass-loader']
             }
         ]
     }

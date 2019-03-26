@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './icons/index'
+import './Icon.scss'
 
 interface IconProps {
   name: string
@@ -7,11 +8,9 @@ interface IconProps {
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
-    <span>
-      <svg>
-        <use xlinkHref={`#icon_${props.name}`}/>
-      </svg>
-    </span>
+    <svg className="fb-icon">
+      <use xlinkHref={`#icon_${props.name}`}/>
+    </svg>
   )
 }
 
