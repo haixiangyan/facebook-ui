@@ -11,7 +11,7 @@ interface IconProps extends React.SVGAttributes<SVGElement> {
 
 const Icon: React.FunctionComponent<IconProps> =
   ({className, name, solid, spin, ...restProps}) => {
-    const link = `#icon-icon_${name}` + (solid ? '_fill' : '')
+    const link = `#icon_${name}` + (solid ? '_fill' : '')
     const classNames = classes('fb-icon', className, spin && 'fb-icon-spin')
     return (
       <svg className={classNames} {...restProps}>
