@@ -8,7 +8,7 @@ module.exports = {
     reporters: ["default", "jest-junit"],
     globals: {
         'ts-jest': {
-            tsConfig: 'tsconfig.json',
+            tsConfig: 'tsconfig.test.json',
         },
     },
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
