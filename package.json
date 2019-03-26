@@ -1,6 +1,6 @@
 {
     "name": "facebook-ui",
-    "versin": "0.0.1",
+    "version": "0.0.1",
     "description": "A UI library is built for Facebook, using React.",
     "main": "dist/lib/index.js",
     "types": "dist/lib/index",
@@ -10,6 +10,7 @@
         "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
         "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.js"
     },
+    "files": ["/dist"],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Haixiang6123/facebook-ui.git"
