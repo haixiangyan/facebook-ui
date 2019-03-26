@@ -3,7 +3,7 @@ import * as renderer from 'react-test-renderer'
 import {mount, shallow} from 'enzyme'
 import Icon from '../Icon'
 
-describe('FbIcon', () => {
+describe('Icon', () => {
   it('should render', () => {
     const json = renderer.create(<Icon name="video"/>).toJSON()
     expect(json).toMatchSnapshot()
