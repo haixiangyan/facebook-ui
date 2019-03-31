@@ -5,4 +5,6 @@
 [![CircleCI](https://circleci.com/gh/Haixiang6123/facebook-ui.svg?style=svg)](https://circleci.com/gh/Haixiang6123/facebook-ui)
 ![](https://img.shields.io/npm/l/facebook-ui.svg)
 
-A UI library is built for Facebook, using React.
+A UI library for Facebook, built with React.
+
+**This UI Library is still under development, please don't use it until it's finished!!!**
