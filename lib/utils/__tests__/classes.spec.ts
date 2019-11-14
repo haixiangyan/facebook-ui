@@ -1,4 +1,4 @@
-import classes from '../classes'
+import {classes} from '../classes'
 
 describe('classes function', () => {
   it('accepts no parameter', () => {
