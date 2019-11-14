@@ -1,13 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { FbIcon } from '../lib/index'
-import FbDialog from '../lib/Dialog/FbDialog.example'
+import FbIconExample from '../lib/Icon/FbIcon.example'
+import FbDialogExample from '../lib/Dialog/FbDialog.example'
 
 ReactDOM.render(
     <div>
-        <FbIcon name="video"/>
-        <FbIcon name="sports"/>
-        <FbDialog/>
+        <FbIconExample/>
+        <FbDialogExample/>
     </div>,
   document.getElementById('root')
 )
