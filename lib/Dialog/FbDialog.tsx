@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {Fragment, ReactElement, ReactNode} from 'react'
+import ReactDOM from 'react-dom'
 
 import './FbDialog.scss'
 import {FbIcon} from '../index'
@@ -28,27 +29,28 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
     }
   }
 
-  return (
+  const dialog =
     props.visible ? (
-        <Fragment>
-          <div className={sc('mask')} onClick={onClickMask}/>
+      <Fragment>
+        <div className={sc('mask')} onClick={onClickMask}/>
 
-          <div className={sc()}>
-            <div className={sc('close')} onClick={onClickClose}>
-              <FbIcon name={'close'}/>
-            </div>
-
-            <header className={sc('header')}>{props.title}</header>
-            <main className={sc('main')}>
-              {props.children}
-            </main>
-            <footer className={sc('footer')}>
-              {props.buttons}
-            </footer>
+        <div className={sc()}>
+          <div className={sc('close')} onClick={onClickClose}>
+            <FbIcon name={'close'}/>
           </div>
-        </Fragment>
-      ) : null
-  )
+
+          <header className={sc('header')}>{props.title}</header>
+          <main className={sc('main')}>
+            {props.children}
+          </main>
+          <footer className={sc('footer')}>
+            {props.buttons}
+          </footer>
+        </div>
+      </Fragment>
+    ) : null
+
+  return ReactDOM.createPortal(dialog, document.body)
 }
 
 FbDialog.defaultProps = {
