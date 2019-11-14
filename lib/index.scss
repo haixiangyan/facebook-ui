@@ -1,0 +1,18 @@
+[class^=fb-] {
+  box-sizing: border-box;
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+button {
+  margin: 0 4px;
+  border-radius: 4px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

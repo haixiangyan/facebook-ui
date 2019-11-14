@@ -20,7 +20,7 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
           <div className={sc('mask')}/>
           <div className={sc()}>
             <div className={sc('close')}>
-              <FbIcon name={'delete'}/>
+              <FbIcon name={'close'}/>
             </div>
             <header className={sc('header')}>Confirm</header>
             <main className={sc('main')}>{props.children}</main>
