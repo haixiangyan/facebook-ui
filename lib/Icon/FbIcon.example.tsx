@@ -4,8 +4,8 @@ import FbIcon from './FbIcon'
 export default function () {
   return (
     <div>
-      <FbIcon name="video"/>
-      <FbIcon name="sport"/>
+      <FbIcon name="close"/>
+      <FbIcon name="back"/>
     </div>
   )
 }
