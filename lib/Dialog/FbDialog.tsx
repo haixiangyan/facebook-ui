@@ -8,6 +8,7 @@ import {createScopedClass} from '../utils/classes'
 interface Props {
   visible: boolean
   children: ReactNode
+  title: string
   buttons: ReactElement[]
   onClose: React.MouseEventHandler
   closeOnClickMask?: boolean
@@ -37,7 +38,7 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
               <FbIcon name={'close'}/>
             </div>
 
-            <header className={sc('header')}>Confirm</header>
+            <header className={sc('header')}>{props.title}</header>
             <main className={sc('main')}>
               {props.children}
             </main>
