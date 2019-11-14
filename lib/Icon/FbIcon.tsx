@@ -1,5 +1,5 @@
 import * as React from 'react'
-import classes from '../utils/classes'
+import {classes} from '../utils/classes'
 import './icons/index'
 import './FbIcon.scss'
 
