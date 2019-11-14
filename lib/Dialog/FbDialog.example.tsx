@@ -1,5 +1,5 @@
 import * as React from 'react'
-import FbDialog, {alert} from './FbDialog'
+import FbDialog, {alert, confirm, modal} from './FbDialog'
 import {useState} from 'react'
 
 export default function () {
@@ -34,8 +34,26 @@ export default function () {
       </div>
 
       <div>
-        <h1>Example3</h1>
+        <h1>Example 3</h1>
         <button onClick={() => alert('Example 3', 'hello')}>Example 3</button>
+      </div>
+
+      <div>
+        <h1>Example 4</h1>
+        <button onClick={() =>
+          confirm('Example 4', 'Are you sure?', () => console.log('yes'), () => console.log('no'))}
+        >
+          Example 4
+        </button>
+      </div>
+
+      <div>
+        <h1>Example 5</h1>
+        <button onClick={
+          () => modal('Example 5', <h1>Hello</h1>)
+        }>
+          Example 5
+        </button>
       </div>
     </div>
   )

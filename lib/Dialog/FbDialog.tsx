@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Fragment, ReactElement, ReactNode} from 'react'
+import {Fragment, ReactElement, ReactFragment, ReactNode} from 'react'
 import ReactDOM from 'react-dom'
 
 import './FbDialog.scss'
@@ -71,6 +71,56 @@ export const alert = (title: string, content: string) => {
         {content}
       </FbDialog>
     )
+
+  ReactDOM.render(component, div)
+}
+
+export const confirm = (title: string, content: string, success: () => void, fail: () => void) => {
+  const div = document.createElement('div')
+  document.body.appendChild(div)
+
+  const onConfirm = () => {
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+    ReactDOM.unmountComponentAtNode(div)
+    div.remove()
+
+    success && success()
+  }
+  const onCancel = () => {
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+    ReactDOM.unmountComponentAtNode(div)
+    div.remove()
+
+    fail && fail()
+  }
+
+  const component = (
+    <FbDialog visible={true} title={title} onClose={onCancel} buttons={[
+      <button key="confirm" onClick={onConfirm}>Confirm</button>,
+      <button key="cancel" onClick={onCancel}>Cancel</button>,
+    ]}>
+      {content}
+    </FbDialog>
+  )
+
+  ReactDOM.render(component, div)
+}
+
+export const modal = (title: string, content: ReactElement | ReactFragment) => {
+  const div = document.createElement('div')
+  document.body.appendChild(div)
+
+  const onClose = () => {
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+    ReactDOM.unmountComponentAtNode(div)
+    div.remove()
+  }
+
+  const component = (
+    <FbDialog visible={true} title={title} onClose={onClose}>
+      {content}
+    </FbDialog>
+  )
 
   ReactDOM.render(component, div)
 }
