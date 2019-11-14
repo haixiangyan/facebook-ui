@@ -10,7 +10,7 @@ interface Props {
   visible: boolean
   children: ReactNode
   title: string
-  buttons: ReactElement[]
+  buttons?: ReactElement[]
   onClose: React.MouseEventHandler
   closeOnClickMask?: boolean
 }
@@ -54,7 +54,25 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
 }
 
 FbDialog.defaultProps = {
-  closeOnClickMask: false
+  closeOnClickMask: true
+}
+
+// Alert to create a new dialog
+export const alert = (title: string, content: string) => {
+  const div = document.createElement('div')
+  document.body.append(div)
+
+  const component = (
+      <FbDialog title={title} visible={true} onClose={() => {
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+        ReactDOM.unmountComponentAtNode(div)
+        div.remove()
+      }}>
+        {content}
+      </FbDialog>
+    )
+
+  ReactDOM.render(component, div)
 }
 
 export default FbDialog
