@@ -43,9 +43,12 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
           <main className={sc('main')}>
             {props.children}
           </main>
-          <footer className={sc('footer')}>
-            {props.buttons}
-          </footer>
+          {
+            props.buttons && props.buttons.length > 0 &&
+            <footer className={sc('footer')}>
+              {props.buttons}
+            </footer>
+          }
         </div>
       </Fragment>
     ) : null
@@ -62,15 +65,22 @@ export const alert = (title: string, content: string) => {
   const div = document.createElement('div')
   document.body.append(div)
 
+  const onClose = () => {
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div)
+    ReactDOM.unmountComponentAtNode(div)
+    div.remove()
+  }
+
   const component = (
-      <FbDialog title={title} visible={true} onClose={() => {
-        ReactDOM.render(React.cloneElement(component, {visible: false}), div)
-        ReactDOM.unmountComponentAtNode(div)
-        div.remove()
-      }}>
-        {content}
-      </FbDialog>
-    )
+    <FbDialog
+      title={title}
+      visible={true}
+      onClose={onClose}
+      buttons={[<button key="OK" onClick={onClose}>OK</button>]}
+    >
+      {content}
+    </FbDialog>
+  )
 
   ReactDOM.render(component, div)
 }
@@ -123,6 +133,8 @@ export const modal = (title: string, content: ReactElement | ReactFragment) => {
   )
 
   ReactDOM.render(component, div)
+
+  return onClose
 }
 
 export default FbDialog

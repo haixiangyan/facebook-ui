@@ -5,6 +5,12 @@ import {useState} from 'react'
 export default function () {
   const [x, setX] = useState(false)
   const [y, setY] = useState(false)
+  const openModal = () => {
+    const close = modal(
+      'Example 5',
+      <h1>Hello <button onClick={() => close()}>Close</button></h1>
+    )
+  }
   return (
     <div>
       <div>
@@ -49,9 +55,7 @@ export default function () {
 
       <div>
         <h1>Example 5</h1>
-        <button onClick={
-          () => modal('Example 5', <h1>Hello</h1>)
-        }>
+        <button onClick={openModal}>
           Example 5
         </button>
       </div>
