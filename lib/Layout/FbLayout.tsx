@@ -12,14 +12,10 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 
 const FbLayout: React.FunctionComponent<Props> = (props) => {
   const {className, ...restProps} = props
-  let hasSider = false
-  if ((props.children as ReactElement[]).length) {
-    (props.children as ReactElement[]).map(node => {
-      if (node.type === FbSider) {
-        hasSider = true
-      }
-    })
-  }
+  const children = (props.children as ReactElement[])
+  const hasSider = children.length &&
+    children.some(node => node.type === FbSider)
+
   return (
     <div className={sc('', { extra: [className, hasSider && 'has-sider'].join(' ') })} {...restProps}>
       {props.children}
