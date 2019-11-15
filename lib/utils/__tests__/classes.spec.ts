@@ -1,4 +1,4 @@
-import {classes} from '../classes'
+import {classes, createScopedClass} from '../classes'
 
 describe('classes function', () => {
   it('accepts no parameter', () => {
@@ -16,5 +16,16 @@ describe('classes function', () => {
   it('can pass undefined', () => {
     const results = classes('foo', undefined)
     expect(results).toEqual('foo')
+  })
+})
+
+describe('createScopedClass function', () => {
+  it('can create prefix', () => {
+    const sc = createScopedClass('fb')
+    expect(sc('')).toEqual('fb')
+    expect(sc('header')).toEqual('fb-header')
+    expect(sc({y: true, z: false})).toEqual('fb-y')
+    expect(sc({y: true, z: true})).toEqual('fb-y fb-z')
+    expect(sc({y: true, z: true}, {extra:'red'})).toEqual('fb-y fb-z red')
   })
 })

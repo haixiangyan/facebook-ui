@@ -13,11 +13,11 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const FbLayout: React.FunctionComponent<Props> = (props) => {
   const {className, ...restProps} = props
   const children = (props.children as ReactElement[])
-  const hasSider = children.length &&
+  const hasSider = 'length' in children &&
     children.some(node => node.type === FbSider)
 
   return (
-    <div className={sc('', { extra: [className, hasSider && 'has-sider'].join(' ') })} {...restProps}>
+    <div className={sc({'': true, hasSider}, {extra: className})} {...restProps}>
       {props.children}
     </div>
   )
