@@ -1,11 +1,19 @@
 import * as React from 'react'
 import {createScopedClass} from '../utils/classes'
 
+import './FbLayout.scss'
+
 const sc = createScopedClass('fb-layout')
 
-const FbContent: React.FunctionComponent = () => {
+interface Props extends React.HTMLAttributes<HTMLElement> {
+}
+
+const FbContent: React.FunctionComponent<Props> = (props) => {
+  const {className, ...restProps} = props
   return (
-    <div className={sc('content')}>Content</div>
+    <div className={sc('content', { extra: className })} {...restProps}>
+      {props.children}
+    </div>
   )
 }
 

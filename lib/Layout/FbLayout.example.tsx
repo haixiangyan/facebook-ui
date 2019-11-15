@@ -10,9 +10,9 @@ export default function() {
       <h1>Example 1</h1>
       <div>
         <FbLayout className="my-layout" style={{height: 500}}>
-          <FbHeader>Header</FbHeader>
-          <FbContent>Content</FbContent>
-          <FbFooter>Footer</FbFooter>
+          <FbHeader>My Header</FbHeader>
+          <FbContent>My Content</FbContent>
+          <FbFooter>My Footer</FbFooter>
         </FbLayout>
       </div>
     </div>
