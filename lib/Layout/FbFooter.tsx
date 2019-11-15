@@ -3,12 +3,10 @@ import {createScopedClass} from '../utils/classes'
 
 const sc = createScopedClass('fb-layout')
 
-const Layout: React.FunctionComponent = (props) => {
+const FbFooter: React.FunctionComponent = () => {
   return (
-    <div className={sc()}>
-      {props.children}
-    </div>
+    <div className={sc('footer')}>Footer</div>
   )
 }
 
-export default Layout
+export default FbFooter

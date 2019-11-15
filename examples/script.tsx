@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import FbIconExample from '../lib/Icon/FbIcon.example'
 import FbDialogExample from '../lib/Dialog/FbDialog.example'
-import FbLayoutExample from '../lib/Layout/Layout.example'
+import FbLayoutExample from '../lib/Layout/FbLayout.example'
 
 ReactDOM.render(
     <div>
