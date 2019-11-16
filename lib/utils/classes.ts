@@ -11,19 +11,13 @@ export function classes(...names: Array<string | undefined | false>) {
 }
 
 export function createScopedClass(prefix: string) {
-  return function scopedClass(name: string | ClassToggles, options?: ScopedClassOptions) {
-    const nameObj = (typeof name === 'string' || typeof name === 'undefined')
-      ? {[name]: name} : name
-
-    const scoped = Object.entries(nameObj)
-                      .filter(entry => entry[1] !== false)
-                      .map(entry => entry[0])
-                      .map(name => [prefix, name]
-                        .filter(Boolean)
-                        .join('-'))
-                      .join(' ')
-
-    return (options && options.extra) ?
-      [scoped, options.extra].filter(Boolean).join(' ') : scoped
-  }
+  return (name: string | ClassToggles, options?: ScopedClassOptions) =>
+    Object.entries(name instanceof Object ? name: {[name]: name})
+      .filter(entry => entry[1] !== false)
+      .map(entry => entry[0])
+      .map(name => [prefix, name]
+        .filter(Boolean)
+        .join('-'))
+      .concat(options && options.extra || [])
+      .join(' ')
 }

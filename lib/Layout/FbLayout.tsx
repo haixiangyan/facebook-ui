@@ -17,7 +17,7 @@ const FbLayout: React.FunctionComponent<Props> = (props) => {
     children.some(node => node.type === FbSider)
 
   return (
-    <div className={sc({'': true, hasSider}, {extra: className})} {...restProps}>
+    <div className={sc({'': true, 'has-sider': hasSider}, {extra: className})} {...restProps}>
       {props.children}
     </div>
   )

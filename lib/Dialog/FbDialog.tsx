@@ -33,7 +33,7 @@ const FbDialog: React.FunctionComponent<Props> = (props) => {
       <Fragment>
         <div className={sc('mask')} onClick={onClickMask}/>
 
-        <div className={sc()}>
+        <div className={sc('')}>
           <div className={sc('close')} onClick={onClickClose}>
             <FbIcon name={'close'}/>
           </div>
