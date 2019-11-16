@@ -24,3 +24,8 @@ const FbLayout: React.FunctionComponent<Props> = (props) => {
 }
 
 export default FbLayout
+export {FbLayout}
+export {default as FbHeader} from './FbHeader'
+export {default as FbContent} from './FbContent'
+export {default as FbFooter} from './FbFooter'
+export {default as FbSider} from './FbSider'
