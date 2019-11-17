@@ -7,4 +7,6 @@
 
 A UI library for Facebook, built with React.
 
+For now, there is a documentation website: https://haixiang6123.github.io/facebook-ui/#/. But still, more works need to be done.
+
 **This UI Library is still under development, please don't use it until it's finished!!!**
