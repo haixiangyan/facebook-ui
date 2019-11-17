@@ -24,12 +24,26 @@ h1, h2, h3, h4, h5, h5 {
 }
 
 .doc-sider {
+  width: 200px;
   padding: 8px;
   border-right: 1px solid #ddd;
   li {
-    margin-left: 1em;
     list-style: none;
     margin-top: 8px;
+    a {
+      padding: 8px;
+      margin: 0 -8px;
+      text-decoration: none;
+      color: black;
+      display: block;
+      &:hover {
+        color: #0074D9;
+      }
+      &.active {
+        color: white;
+        background: #0074D9;
+      }
+    }
   }
 }
 

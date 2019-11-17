@@ -1,17 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import './style.scss'
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+import {HashRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
 import logo from './logo.png'
 import FbIconExample from '../lib/Icon/FbIcon.example'
 import FbDialogExample from '../lib/Dialog/FbDialog.example'
 import FbLayoutExample from '../lib/Layout/FbLayout.example'
-import {FbLayout, FbSider, FbContent, FbHeader, FbFooter} from '../lib/Layout/FbLayout'
+import {FbContent, FbFooter, FbHeader, FbLayout, FbSider} from '../lib/Layout/FbLayout'
 
 ReactDOM.render(
     <Router>
@@ -25,9 +20,9 @@ ReactDOM.render(
           <FbSider className="doc-sider">
             <h2>Component</h2>
             <ul>
-              <li><Link to="/icon">Icon</Link></li>
-              <li><Link to="/dialog">Dialog</Link></li>
-              <li><Link to="/layout">Layout</Link></li>
+              <li><NavLink to="/icon">Icon</NavLink></li>
+              <li><NavLink to="/dialog">Dialog</NavLink></li>
+              <li><NavLink to="/layout">Layout</NavLink></li>
             </ul>
           </FbSider>
           <FbContent className="doc-content">
