@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom'
 import './style.scss'
 import {HashRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
 import logo from './logo.png'
-import FbIconExample from '../lib/Icon/FbIcon.example'
+import FbIconDemo from '../lib/Icon/FbIcon.demo'
 import FbDialogExample from '../lib/Dialog/FbDialog.example'
 import FbLayoutExample from '../lib/Layout/FbLayout.example'
 import {FbContent, FbFooter, FbHeader, FbLayout, FbSider} from '../lib/Layout/FbLayout'
@@ -33,24 +33,9 @@ ReactDOM.render(
                   <p>This is a simple UI library built with React.js</p>
                 </div>
               </Route>
-              <Route path="/icon">
-                <div>
-                  <h1>Icon</h1>
-                  <FbIconExample/>
-                </div>
-              </Route>
-              <Route path="/dialog">
-                <div>
-                  <h1>Dialog</h1>
-                  <FbDialogExample/>
-                </div>
-              </Route>
-              <Route path="/layout">
-                <div>
-                  <h1>Layout</h1>
-                  <FbLayoutExample/>
-                </div>
-              </Route>
+              <Route path="/icon" component={FbIconDemo}/>
+              <Route path="/dialog" component={FbDialogExample}/>
+              <Route path="/layout" component={FbLayoutExample}/>
             </Switch>
           </FbContent>
         </FbLayout>
