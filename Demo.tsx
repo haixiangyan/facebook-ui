@@ -4,7 +4,7 @@ interface Props {
   code: string
 }
 
-const demo: React.FunctionComponent<Props> = (props) => {
+const Demo: React.FunctionComponent<Props> = (props) => {
   return (
     <div>
       {props.children}
@@ -15,4 +15,4 @@ const demo: React.FunctionComponent<Props> = (props) => {
   )
 }
 
-export default demo
+export default Demo

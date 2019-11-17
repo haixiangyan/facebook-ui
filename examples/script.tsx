@@ -4,8 +4,8 @@ import './style.scss'
 import {HashRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
 import logo from './logo.png'
 import FbIconDemo from '../lib/Icon/FbIcon.demo'
-import FbDialogExample from '../lib/Dialog/FbDialog.example'
-import FbLayoutExample from '../lib/Layout/FbLayout.example'
+import FbDialogDemo from '../lib/Dialog/FbDialog.demo'
+import FbLayoutDemo from '../lib/Layout/FbLayout.demo'
 import {FbContent, FbFooter, FbHeader, FbLayout, FbSider} from '../lib/Layout/FbLayout'
 
 ReactDOM.render(
@@ -34,8 +34,8 @@ ReactDOM.render(
                 </div>
               </Route>
               <Route path="/icon" component={FbIconDemo}/>
-              <Route path="/dialog" component={FbDialogExample}/>
-              <Route path="/layout" component={FbLayoutExample}/>
+              <Route path="/dialog" component={FbDialogDemo}/>
+              <Route path="/layout" component={FbLayoutDemo}/>
             </Switch>
           </FbContent>
         </FbLayout>
