@@ -16,13 +16,13 @@ import {FbLayout, FbSider, FbContent, FbHeader, FbFooter} from '../lib/Layout/Fb
 ReactDOM.render(
     <Router>
       <FbLayout className="example">
-        <FbHeader>
+        <FbHeader className="header">
           <div className="logo">
-            <img src={logo} alt="Logo"/>
+            <img width="48" height="48" src={logo} alt="Logo"/>
           </div>
         </FbHeader>
         <FbLayout>
-          <FbSider>
+          <FbSider className="doc-sider">
             <h2>Component</h2>
             <ul>
               <li><Link to="/icon">Icon</Link></li>
@@ -30,8 +30,11 @@ ReactDOM.render(
               <li><Link to="/lahyout">Layout</Link></li>
             </ul>
           </FbSider>
-          <FbContent>
+          <FbContent className="doc-content">
             <Switch>
+              <Route path="/" exact={true}>
+                <div>Welcome to Facebook UI</div>
+              </Route>
               <Route path="/icon">
                 <div>
                   <h1>Icon</h1>
@@ -53,7 +56,7 @@ ReactDOM.render(
             </Switch>
           </FbContent>
         </FbLayout>
-        <FbFooter>Footer</FbFooter>
+        <FbFooter className="doc-footer">Made by Haixiang Yan</FbFooter>
       </FbLayout>
     </Router>,
   document.getElementById('root')
