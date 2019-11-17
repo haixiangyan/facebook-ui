@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import './style.scss'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -27,13 +27,16 @@ ReactDOM.render(
             <ul>
               <li><Link to="/icon">Icon</Link></li>
               <li><Link to="/dialog">Dialog</Link></li>
-              <li><Link to="/lahyout">Layout</Link></li>
+              <li><Link to="/layout">Layout</Link></li>
             </ul>
           </FbSider>
           <FbContent className="doc-content">
             <Switch>
               <Route path="/" exact={true}>
-                <div>Welcome to Facebook UI</div>
+                <div>
+                  <h2>Welcome to Facebook UI</h2>
+                  <p>This is a simple UI library built with React.js</p>
+                </div>
               </Route>
               <Route path="/icon">
                 <div>

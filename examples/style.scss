@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, h5 {
 .doc-sider {
   padding: 8px;
   border-right: 1px solid #ddd;
+  li {
+    margin-left: 1em;
+    list-style: none;
+    margin-top: 8px;
+  }
 }
 
 .doc-content {
