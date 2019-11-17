@@ -9,7 +9,8 @@
         "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js",
         "doc": "cross-env NODE_ENV=production webpack --config ./webpack.config.doc.js",
         "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
-        "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js"
+        "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js",
+        "deploy": "gh-pages -d doc"
     },
     "files": [
         "/dist"
@@ -30,7 +31,7 @@
     "bugs": {
         "url": "https://github.com/Haixiang6123/facebook-ui/issues"
     },
-    "homepage": "https://github.com/Haixiang6123/facebook-ui#readme",
+    "homepage": "https://github.com/Haixiang6123/facebook-ui",
     "devDependencies": {
         "@babel/core": "^7.4.0",
         "@babel/preset-env": "^7.4.2",
@@ -51,6 +52,7 @@
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "^1.11.2",
         "file-loader": "^4.2.0",
+        "gh-pages": "^2.1.1",
         "html-webpack-plugin": "^3.2.0",
         "jest": "^24.5.0",
         "jest-junit": "^6.3.0",

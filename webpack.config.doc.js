@@ -13,7 +13,7 @@ module.exports = Object.assign({}, base, {
         new HtmlWebpackPlugin({
             title: 'facebook-ui',
             template: './examples/index.html',
-            filename: 'example.html'
+            filename: 'index.html'
         })
     ]
 })
