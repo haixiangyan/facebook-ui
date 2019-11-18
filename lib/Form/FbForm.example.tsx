@@ -1,6 +1,7 @@
 import * as React from 'react'
 import FbForm, {Values} from './FbForm'
 import {useState, Fragment} from 'react'
+import Validator from './Validator'
 
 const FbFormExample: React.FunctionComponent = () => {
   const [formData, setFormData] = useState<Values>({
@@ -12,7 +13,12 @@ const FbFormExample: React.FunctionComponent = () => {
     {name: 'password', label: 'Password', input: {type: 'password'}},
   ])
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log('Submit', formData)
+    const rules = [
+      {name: 'userName', required: true},
+      {name: 'userName', minLength: 4, maxLength: 8},
+    ]
+    const errros = Validator(formData, rules)
+    console.log(errros)
   }
   return (
     <div>
