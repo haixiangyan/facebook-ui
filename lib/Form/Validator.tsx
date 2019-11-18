@@ -7,6 +7,7 @@ interface Rule {
   required?: boolean
   minLength?: number
   maxLength?: number
+  pattern?: RegExp
 }
 
 interface Errors {
@@ -37,6 +38,11 @@ const Validator = (values: Values, rules: Rules): Errors => {
     }
     if (rule.maxLength && !isEmpty(value) && value.length > rule.maxLength) {
       addError(rule.name, 'Value is longer than maximum length')
+    }
+    if (rule.pattern) {
+      if (!rule.pattern.test(value)) {
+        addError(rule.name, 'Pattern is not matched')
+      }
     }
   })
 

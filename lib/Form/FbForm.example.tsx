@@ -16,6 +16,7 @@ const FbFormExample: React.FunctionComponent = () => {
     const rules = [
       {name: 'userName', required: true},
       {name: 'userName', minLength: 4, maxLength: 8},
+      {name: 'userName', pattern: /^[A-Za-z0-9]+$/},
     ]
     const errros = Validator(formData, rules)
     console.log(errros)
