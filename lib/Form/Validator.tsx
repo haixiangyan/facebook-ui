@@ -10,7 +10,7 @@ interface Rule {
   pattern?: RegExp
 }
 
-interface Errors {
+export interface Errors {
   [K: string]: string[]
 }
 

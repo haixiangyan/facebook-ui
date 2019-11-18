@@ -12,14 +12,17 @@ const FbFormExample: React.FunctionComponent = () => {
     {name: 'userName', label: 'UserName', input: {type: 'text'}},
     {name: 'password', label: 'Password', input: {type: 'password'}},
   ])
+  const [errors, setErrors] = useState({})
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const rules = [
       {name: 'userName', required: true},
       {name: 'userName', minLength: 4, maxLength: 8},
       {name: 'userName', pattern: /^[A-Za-z0-9]+$/},
+      {name: 'password', required: true},
+      {name: 'password', minLength: 4, maxLength: 8},
+      {name: 'password', pattern: /^[A-Za-z0-9]+$/},
     ]
-    const errros = Validator(formData, rules)
-    console.log(errros)
+    setErrors(Validator(formData, rules))
   }
   return (
     <div>
@@ -30,6 +33,7 @@ const FbFormExample: React.FunctionComponent = () => {
                   <button>Back</button>
                 </Fragment>
               }
+              errors={errors}
               onChange={newValue => setFormData(newValue)}
               onSubmit={onSubmit}
       />

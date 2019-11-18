@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {ReactFragment} from 'react'
+import {Errors} from './Validator'
 
 interface Fields {
   name: string
@@ -17,6 +18,7 @@ interface Props {
   buttons: ReactFragment
   onSubmit: React.FormEventHandler<HTMLFormElement>
   onChange: (values: Values) => void
+  errors: Errors
 }
 
 const FbForm: React.FunctionComponent<Props> = (props) => {
@@ -41,6 +43,7 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
               value={values[field.name]}
               onChange={(e) => onInputChange(field.name, e.target.value)}
             />
+            <div>{props.errors[field.name]}</div>
           </div>
         )
       )}
