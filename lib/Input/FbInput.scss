@@ -1,0 +1,16 @@
+@import "../variables";
+
+.fb-input {
+  padding: 4px 8px;
+  line-height: 22px;
+  border-radius: 4px;
+  border: 1px solid $grey;
+  box-shadow: 0 0 2px 1px fade_out($main-color, 1);
+  transition: box-shadow 250ms;
+  
+  &:focus {
+    outline: none;
+    border-color: $main-color;
+    box-shadow: 0 0 2px 1px fade_out($main-color, 0.5);
+  }
+}

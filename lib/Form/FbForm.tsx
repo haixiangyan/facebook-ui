@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {ReactFragment} from 'react'
 import {Errors} from './Validator'
+import FbInput from '../Input/FbInput'
+import {classes} from '../utils/classes'
 
 interface Fields {
   name: string
@@ -35,9 +37,9 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
     <form onSubmit={onSubmit}>
       {props.fields.map(field =>
         (
-          <div key={field.name}>
+          <div key={field.name} className={classes('fb-form-row')}>
             {field.label}
-            <input
+            <FbInput
               name={field.name}
               type={field.input.type}
               value={values[field.name]}
