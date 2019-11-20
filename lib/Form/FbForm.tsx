@@ -4,6 +4,8 @@ import {Errors} from './Validator'
 import FbInput from '../Input/FbInput'
 import {classes} from '../utils/classes'
 
+import './FbForm.scss'
+
 interface Fields {
   name: string
   label: string
@@ -11,7 +13,7 @@ interface Fields {
 }
 
 export interface Values {
-   [K: string]: any
+  [K: string]: any
 }
 
 interface Props {
@@ -35,23 +37,27 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
   }
   return (
     <form onSubmit={onSubmit}>
-      {props.fields.map(field =>
-        (
-          <div key={field.name} className={classes('fb-form-row')}>
-            {field.label}
-            <FbInput
-              name={field.name}
-              type={field.input.type}
-              value={values[field.name]}
-              onChange={(e) => onInputChange(field.name, e.target.value)}
-            />
-            <div>{props.errors[field.name]}</div>
-          </div>
-        )
-      )}
-      <div>
-        {props.buttons}
-      </div>
+      <table>
+        {props.fields.map(field =>
+          (
+            <tr key={field.name} className={classes('fb-form-row')}>
+              <td><span>{field.label}</span></td>
+              <td>
+                <FbInput
+                  name={field.name}
+                  type={field.input.type}
+                  value={values[field.name]}
+                  onChange={(e) => onInputChange(field.name, e.target.value)}
+                />
+                <div>{props.errors[field.name]}</div>
+              </td>
+            </tr>
+          )
+        )}
+        <div>
+          {props.buttons}
+        </div>
+      </table>
     </form>
   )
 }
