@@ -59,7 +59,8 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
             )
           )}
           <tr className="fb-form-tr">
-            <td>{props.buttons}</td>
+            <td className="fb-form-td"/>
+            <td className="fb-form-td">{props.buttons}</td>
           </tr>
         </tbody>
       </table>

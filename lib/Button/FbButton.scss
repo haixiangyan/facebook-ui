@@ -1,0 +1,43 @@
+@import "../variables";
+
+.fb-button {
+  padding: 4px 16px;
+  line-height: 22px;
+  transition: all 250ms;
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &-solid {
+    color: white;
+    border: 1px solid $main-color;
+    background: $main-color;
+    &:hover, &:focus {
+      background: white;
+      color: $main-color;
+    }
+  }
+  
+  &-danger {
+    color: $text-color;
+    border: 1px solid $border-color;
+    background: white;
+    
+    &:hover, &:focus {
+      border-color: red;
+      color: red;
+    }
+  }
+  
+  &-info {
+    color: $text-color;
+    border: 1px solid $border-color;
+    background: white;
+  
+    &:hover, &:focus {
+      border-color: $main-color;
+      color: $main-color;
+    }
+  }
+}

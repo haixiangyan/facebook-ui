@@ -7,6 +7,7 @@ import FbIconDemo from '../lib/Icon/FbIcon.demo'
 import FbDialogDemo from '../lib/Dialog/FbDialog.demo'
 import FbLayoutDemo from '../lib/Layout/FbLayout.demo'
 import FbFormDemo from '../lib/Form/FbForm.demo'
+import FbButtonDemo from '../lib/Button/FbButton.demo'
 import {FbContent, FbFooter, FbHeader, FbLayout, FbSider} from '../lib/Layout/FbLayout'
 
 ReactDOM.render(
@@ -25,6 +26,7 @@ ReactDOM.render(
               <li><NavLink to="/dialog">Dialog</NavLink></li>
               <li><NavLink to="/layout">Layout</NavLink></li>
               <li><NavLink to="/form">Form</NavLink></li>
+              <li><NavLink to="/button">Button</NavLink></li>
             </ul>
           </FbSider>
           <FbContent className="doc-content">
@@ -39,6 +41,7 @@ ReactDOM.render(
               <Route path="/dialog" component={FbDialogDemo}/>
               <Route path="/layout" component={FbLayoutDemo}/>
               <Route path="/form" component={FbFormDemo}/>
+              <Route path="/button" component={FbButtonDemo}/>
             </Switch>
           </FbContent>
         </FbLayout>

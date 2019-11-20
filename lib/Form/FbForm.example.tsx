@@ -2,6 +2,7 @@ import * as React from 'react'
 import FbForm, {Values} from './FbForm'
 import {useState, Fragment} from 'react'
 import Validator, {noErrors} from './Validator'
+import FbButton from '../Button/FbButton'
 
 const FbFormExample: React.FunctionComponent = () => {
   const [formData, setFormData] = useState<Values>({
@@ -32,8 +33,8 @@ const FbFormExample: React.FunctionComponent = () => {
       <FbForm values={formData} fields={fields}
               buttons={
                 <Fragment>
-                  <button type="submit">Submit</button>
-                  <button>Back</button>
+                  <FbButton type="info">Submit</FbButton>
+                  <FbButton type="danger">Back</FbButton>
                 </Fragment>
               }
               errors={errors}
