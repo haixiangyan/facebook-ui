@@ -38,25 +38,30 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
   return (
     <form onSubmit={onSubmit}>
       <table>
-        {props.fields.map(field =>
-          (
-            <tr key={field.name} className={classes('fb-form-row')}>
-              <td><span>{field.label}</span></td>
-              <td>
-                <FbInput
-                  name={field.name}
-                  type={field.input.type}
-                  value={values[field.name]}
-                  onChange={(e) => onInputChange(field.name, e.target.value)}
-                />
-                <div>{props.errors[field.name]}</div>
-              </td>
-            </tr>
-          )
-        )}
-        <div>
-          {props.buttons}
-        </div>
+        <tbody>
+          {props.fields.map(field =>
+            (
+              <tr key={field.name} className={classes('fb-form-tr')}>
+                <td className="fb-form-td">
+                  <span>{field.label}</span>
+                </td>
+                <td className="fb-form-td">
+                  <FbInput
+                    className="fb-form-input"
+                    name={field.name}
+                    type={field.input.type}
+                    value={values[field.name]}
+                    onChange={(e) => onInputChange(field.name, e.target.value)}
+                  />
+                  <div>{props.errors[field.name]}</div>
+                </td>
+              </tr>
+            )
+          )}
+          <tr className="fb-form-tr">
+            <td>{props.buttons}</td>
+          </tr>
+        </tbody>
       </table>
     </form>
   )
