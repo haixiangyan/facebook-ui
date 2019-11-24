@@ -1,12 +1,26 @@
+@import "../variables";
+
 .fb-form {
+  &-table {
+    border-collapse: collapse;
+  }
+  &-label {
+    line-height: 32px;
+  }
   &-td {
+    position: relative;
     padding-top: 0;
-    padding-bottom: 32px;
+    padding-bottom: 48px;
+    vertical-align: top;
   }
   &-tr:last-child &-td{
     padding-bottom: 0;
   }
   &-td + &-td {
     padding-left: 16px;
+  }
+  &-errors {
+    position: absolute;
+    color: $red;
   }
 }

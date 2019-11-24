@@ -37,13 +37,13 @@ const FbForm: React.FunctionComponent<Props> = (props) => {
   }
   return (
     <form onSubmit={onSubmit}>
-      <table>
+      <table className="fb-form-table">
         <tbody>
           {props.fields.map(field =>
             (
               <tr key={field.name} className={classes('fb-form-tr')}>
                 <td className="fb-form-td">
-                  <span>{field.label}</span>
+                  <span className="fb-form-label">{field.label}</span>
                 </td>
                 <td className="fb-form-td">
                   <FbInput
